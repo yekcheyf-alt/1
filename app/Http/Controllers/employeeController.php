@@ -52,7 +52,7 @@ class employeeController extends Controller
 
         return redirect()->route('employee.index')->with('success', 'Employee updated successfully.');
     }
-    public function destroy($id)
+    public function delete($id)
     {
         $employee = employee::findOrFail($id);
         $employee->delete();
